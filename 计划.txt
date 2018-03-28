@@ -89,6 +89,7 @@ git init 　初始化文件夹
 git add -A　　将全部文件添加到缓存区
 git add xxxx　　将指定文件添加到缓存区
 git commit -m xxx　　提交（将缓冲区与当前分支相合并）
+git commit -am "version1"
 git log　查看操作日志
 git status 　查看当前文件夹下所有文件状态（未提交　修改未提交。。。）
 git diff xxx　　查看指定文件的修改状态
@@ -102,8 +103,15 @@ git checkout xxx(指的是文件)　回复操作，在还没commit之前的操�
 git merge xxx　　合并某分支到当前分支
 git branch –d xxx　　删除分支
 git remote add origin https://github.com/tugenhua0707/testgit.git　　连接远程仓库
+git push origin test:master         // 提交本地test分支 作为 远程的master分支
+git push origin test:test              // 提交本地test分支作为远程的test分支
 git push -u origin master 将本地仓库的信息同步到远程　有时候需要master前面添加 +　表示强制同步 
 	master　表示要远程同步的分支名　　如想同步tag分支，就填写tag
+删除远程分支  
+git branch -r -d origin/branch-name
+git push origin :branch-name 
+git remote remove br-name
+
 git remote 查看远程库的信息
 git remote -v　查看远程库的详细信息
 git clone https://github.com/tugenhua0707/testgit.git下载远程仓库（克隆）
@@ -111,7 +119,8 @@ git clone https://github.com/tugenhua0707/testgit.git下载远程仓库（克隆
 git remote show <主机名>
 git pull origin tag:tag2  
 	origin远程主机 tag远程主机下的分支 tag2要从远程同步到该分支 (把远程想要的分支同步到指定的本地分支下)
-git push origin :[branch_name] 删除远程分支　orgin为远程主机名字　
+git pull[remote] [branch]取回远程仓库的变化，并与本地分支合并
+
 
 ((430+914)-x)/(8/4)=520 x=304
 
@@ -214,8 +223,6 @@ https://www.jianshu.com/p/e740196225a4　　gson
 https://www.jianshu.com/p/308f3c54abdd retrofit
 http://blog.csdn.net/carson_ho/article/details/73732076  retrofit
 https://www.jianshu.com/p/dad51f6c9c4d?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation   大全
-
-
 
 
 
