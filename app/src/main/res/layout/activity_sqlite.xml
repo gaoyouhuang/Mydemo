@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_saveBean"
+            android:onClick="saveBean"
+            android:layout_width="wrap_content"
+            android:text="添加"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_getListBean"
+            android:onClick="getListBean"
+            android:layout_width="wrap_content"
+            android:text="获取列表"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_seachBean"
+            android:onClick="seachBean"
+            android:layout_width="wrap_content"
+            android:text="获取指定bean"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_deleBean"
+            android:onClick="deleBean"
+            android:layout_width="wrap_content"
+            android:text="删除指定bean"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_deleteAll"
+            android:onClick="deleteAll"
+            android:layout_width="wrap_content"
+            android:text="删除全部"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tv_showSql"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

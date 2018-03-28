@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="main"
+            type="com.example.scs.myapplication.activity.Main3Activity"></variable>
+
+        <variable
+            name="data"
+            type="com.example.scs.myapplication.bean.StudentBean"></variable>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.example.scs.myapplication.ui.MyEditText
+            android:id="@+id/my_et"
+            android:name="@={data.name}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{main.onMainClick}"
+            android:text="修改edittext" />
+
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{main.onMainClick}"
+            android:text="修改bean" />
+
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{main.onMainClick}"
+            android:text="ToMain4(MVP)" />
+
+        <Button
+            android:id="@+id/btn_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{main.onMainClick}"
+            android:text="懒加载" />
+
+        <Button
+            android:id="@+id/btn_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{main.onMainClick}"
+            android:text="生命周期的研究" />
+    </LinearLayout>
+</layout>

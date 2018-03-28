@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"></import>
+
+        <import type="com.example.scs.myapplication.bean.StudentBean"></import>
+
+        <import type="com.example.scs.myapplication.InverseMethodDemo"></import>
+
+        <variable
+            name="main"
+            type="com.example.scs.myapplication.MainActivity"></variable>
+
+        <variable
+            name="tv1data"
+            type="String"></variable>
+
+        <variable
+            name="studentdata"
+            type="StudentBean"></variable>
+
+        <variable
+            name="iclick"
+            type="com.example.scs.myapplication.myinterface.IClick"></variable>
+
+        <variable
+            name="ordercode"
+            type="String"></variable>
+
+        <import type="java.util.List"></import>
+
+        <variable
+            name="data"
+            type="List&lt;String&gt;"></variable>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.scs.myapplication.MainActivity">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{tv1data}" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text='@{studentdata.name+"     mainactivity"}' />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{main.onBtnChange}"
+                android:text="change" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{iclick.onClick1}"
+            android:text="点击事件用法2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@={InverseMethodDemo.orderTypeToString(ordercode)}" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{iclick.onClick2}"
+                android:text="InverseMethod 用法" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:data="@{data}"></android.support.v7.widget.RecyclerView>
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{iclick.onClick3}"
+            android:text="ToMain2" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{iclick.onClick5}"
+            android:text="rxjava练习" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{iclick.onClick6}"
+            android:text="retrofit练习" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{iclick.onClick7}"
+            android:text="SQL练习" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view)->iclick.onClick4(view,tv1data)}"
+            android:text="带参数的方法" />
+    </LinearLayout>
+       </ScrollView>
+    </LinearLayout>
+
+</layout>
