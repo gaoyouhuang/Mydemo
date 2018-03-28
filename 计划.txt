@@ -107,9 +107,10 @@ git push origin test:master         // 提交本地test分支 作为 远程的ma
 git push origin test:test              // 提交本地test分支作为远程的test分支
 git push -u origin master 将本地仓库的信息同步到远程　有时候需要master前面添加 +　表示强制同步 
 	master　表示要远程同步的分支名　　如想同步tag分支，就填写tag
-删除远程分支  
+git push origin master 将master跟新到远程仓库
+删除远程分支
 git branch -r -d origin/branch-name
-git push origin :branch-name 
+git push origin :branch-name
 git remote remove br-name
 
 git remote 查看远程库的信息
@@ -117,9 +118,9 @@ git remote -v　查看远程库的详细信息
 git clone https://github.com/tugenhua0707/testgit.git下载远程仓库（克隆）
 	git clone　-o zhujiming https://github.com/tugenhua0707/testgit.git 自定义主机名
 git remote show <主机名>
-git pull origin tag:tag2  
+git pull origin tag:tag2
 	origin远程主机 tag远程主机下的分支 tag2要从远程同步到该分支 (把远程想要的分支同步到指定的本地分支下)
-git pull[remote] [branch]取回远程仓库的变化，并与本地分支合并
+git pull[remote] [branch]:分支　　取回远程仓库的变化，并与本地分支合并　:后面可以省略
 
 
 ((430+914)-x)/(8/4)=520 x=304
