@@ -18,5 +18,6 @@ public interface IClick {
     void onClick5(View view);
     void onClick6(View view);
     void onClick7(View view);
+    void onClick8(View view);
 
 }

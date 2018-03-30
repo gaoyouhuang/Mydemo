@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.example.scs.myapplication.activity.Main2Activity;
 import com.example.scs.myapplication.activity.RXTextActivity;
 import com.example.scs.myapplication.activity.SqliteActivity;
+import com.example.scs.myapplication.activity.WebViewActivity;
 import com.example.scs.myapplication.bean.StudentBean;
 import com.example.scs.myapplication.databinding.ActivityMainBinding;
 import com.example.scs.myapplication.databinding.ItemDemoBinding;
@@ -90,6 +91,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick7(View view) {
                 Intent intent = new Intent(MainActivity.this, SqliteActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onClick8(View view) {
+                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
                 startActivity(intent);
             }
 

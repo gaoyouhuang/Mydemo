@@ -105,42 +105,52 @@
             android:layout_height="wrap_content"
             android:data="@{data}"></android.support.v7.widget.RecyclerView>
 
-       <ScrollView
-           android:layout_width="match_parent"
-           android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
-        <Button
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{iclick.onClick3}"
-            android:text="ToMain2" />
+            android:layout_height="match_parent">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{iclick.onClick5}"
-            android:text="rxjava练习" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{iclick.onClick6}"
-            android:text="retrofit练习" />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{iclick.onClick7}"
-            android:text="SQL练习" />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{(view)->iclick.onClick4(view,tv1data)}"
-            android:text="带参数的方法" />
-    </LinearLayout>
-       </ScrollView>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{iclick.onClick3}"
+                    android:text="ToMain2" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{iclick.onClick5}"
+                    android:text="rxjava练习" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{iclick.onClick6}"
+                    android:text="retrofit练习" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{iclick.onClick7}"
+                    android:text="SQL练习" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{(view)->iclick.onClick4(view,tv1data)}"
+                    android:text="带参数的方法" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{iclick.onClick8}"
+                    android:text="WebView练习" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
 </layout>
