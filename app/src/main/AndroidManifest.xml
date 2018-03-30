@@ -37,7 +37,8 @@
         <activity android:name=".retrofit.RetrofitActivity" />
         <activity android:name=".retrofit.LoginActivity" />
         <activity android:name=".activity.SqliteActivity" />
-        <activity android:name=".activity.WebViewActivity"></activity>
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.ConstraintLayoutActivity"></activity>
     </application>
 
 </manifest>

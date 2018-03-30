@@ -149,6 +149,12 @@
                     android:layout_height="wrap_content"
                     android:onClick="@{iclick.onClick8}"
                     android:text="WebView练习" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{iclick.onClick9}"
+                    android:text="约束布局的使用" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

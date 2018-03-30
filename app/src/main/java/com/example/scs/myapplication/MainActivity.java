@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.scs.myapplication.activity.ConstraintLayoutActivity;
 import com.example.scs.myapplication.activity.Main2Activity;
 import com.example.scs.myapplication.activity.RXTextActivity;
 import com.example.scs.myapplication.activity.SqliteActivity;
@@ -99,7 +100,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
                 startActivity(intent);
             }
-
+            @Override
+            public void onClick9(View view) {
+                Intent intent = new Intent(MainActivity.this, ConstraintLayoutActivity.class);
+                startActivity(intent);
+            }
         });
 
         binding.setOrdercode("5");
