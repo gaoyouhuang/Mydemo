@@ -61,7 +61,9 @@ sudo rm /usr/bin/adb
 5.View动画（深入了解）
 6.四大组件的启动过程源码（深入了解）
 7.四大组件的使用（熟练运用）
-8.布局优化
+8.布局优化 (OK)
+	1.少嵌套　2.用ConstraintLayout约束布局　3.少用相对布局，因为要绘制两边
+	4.线性布局　使用权重也要绘制两边
 9.Activity Fragment个个生命周期的意义
 10.java基础  （反射一定要看）
 11.Loader MVP的使用 详（DataBindingDemo ---->Main4Activity）(OK)
@@ -72,11 +74,13 @@ sudo rm /usr/bin/adb
         4.Drawable drawable =getActivity().getResources().getDrawable(R.drawable.leak_canary_icon);
         view.setBackground(drawable);
 13.grald开发
-14.ConstraintLayout md风格
+14.ConstraintLayout    (ok)
+	md风格
 15.xml解析　
 16.5.0 6.0 7.0 8.0 9.0 特性
 17.rn 前端ui
-18.sqlite　 webview　  
+18.sqlite　(DataBindingDemo ---->SqliteActivity)(OK)　
+	webview　 (DataBindingDemo ---->WebViewActivity)(OK)
 19.RXJAVA+Retrofit+Okhttp+Mvp (RxRetrofitMvp)　(OK)
 20.性能调试方法
 
@@ -105,9 +109,9 @@ git branch –d xxx　　删除分支
 git remote add origin https://github.com/tugenhua0707/testgit.git　　连接远程仓库
 git push origin test:master         // 提交本地test分支 作为 远程的master分支
 git push origin test:test              // 提交本地test分支作为远程的test分支
-git push -u origin master 将本地仓库的信息同步到远程　有时候需要master前面添加 +　表示强制同步 
+git push -u origin master 将本地仓库的信息同步到远程　有时候需要master前面添加 +　表示强制同步
 	master　表示要远程同步的分支名　　如想同步tag分支，就填写tag
-git push origin master 将master跟新到远程仓库
+git push origin master 将master更新新到远程仓库
 删除远程分支
 git branch -r -d origin/branch-name
 git push origin :branch-name
