@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_item_book"
+            android:title="支付宝界面" />
+        <item
+            android:id="@+id/navigation_item_example"
+            android:title="测试" />
+        <item
+            android:id="@+id/navigation_item_blog"
+            android:title="测试" />
+
+        <item
+            android:id="@+id/navigation_item_about"
+            android:title="测试" />
+    </group>
+</menu>

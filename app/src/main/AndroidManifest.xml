@@ -38,7 +38,10 @@
         <activity android:name=".retrofit.LoginActivity" />
         <activity android:name=".activity.SqliteActivity" />
         <activity android:name=".activity.WebViewActivity" />
-        <activity android:name=".activity.ConstraintLayoutActivity"></activity>
+        <activity android:name=".activity.ConstraintLayoutActivity" />
+        <activity android:name=".activity.MdStyleActivity" />
+        <activity android:name=".activity.MdZFBActivity" />
+        <activity android:name=".activity.NullActivity" android:theme="@style/AppTheme_null"></activity>
     </application>
 
 </manifest>

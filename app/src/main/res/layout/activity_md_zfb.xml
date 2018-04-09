@@ -1,0 +1,114 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/c_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="@android:color/holo_purple">
+
+            <ImageView
+                android:id="@+id/iv_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:scaleType="fitXY"
+                android:src="@mipmap/headerimage_01"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.9" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin">
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="1TextView1"
+                    android:textColor="#ffffff"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="2TextView2"
+                    android:textColor="#ffffff"
+                    android:textSize="25dp" />
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

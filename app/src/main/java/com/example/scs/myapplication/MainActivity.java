@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import com.example.scs.myapplication.activity.ConstraintLayoutActivity;
 import com.example.scs.myapplication.activity.Main2Activity;
+import com.example.scs.myapplication.activity.MdStyleActivity;
+import com.example.scs.myapplication.activity.NullActivity;
 import com.example.scs.myapplication.activity.RXTextActivity;
 import com.example.scs.myapplication.activity.SqliteActivity;
 import com.example.scs.myapplication.activity.WebViewActivity;
@@ -53,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
         count = new MyCount(10000, 1000);
 
         binding.setMain(this);//绑定点击事件 用法1
+
+        binding.btnNullactivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NullActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //绑定点击事件 用法2
         binding.setIclick(new IClick() {
@@ -100,9 +110,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
                 startActivity(intent);
             }
+
             @Override
             public void onClick9(View view) {
                 Intent intent = new Intent(MainActivity.this, ConstraintLayoutActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onClick10(View view) {
+                Intent intent = new Intent(MainActivity.this, MdStyleActivity.class);
                 startActivity(intent);
             }
         });

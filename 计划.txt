@@ -83,6 +83,10 @@ sudo rm /usr/bin/adb
 	webview　 (DataBindingDemo ---->WebViewActivity)(OK)
 19.RXJAVA+Retrofit+Okhttp+Mvp (RxRetrofitMvp)　(OK)
 20.性能调试方法
+21.沉浸式状态栏　颜色
+22.http://lib.csdn.net/article/android/54459   DecorView层级
+23.事件分发　https://blog.csdn.net/mynameishuangshuai/article/details/52900723
+24.handler looper message
 
 git 常用操作指令
 git config --global user.name "xxxx"　设置git用户名
