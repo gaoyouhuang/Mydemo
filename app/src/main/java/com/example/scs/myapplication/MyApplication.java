@@ -1,7 +1,7 @@
 package com.example.scs.myapplication;
 
-import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDexApplication;
 
 import retrofit2.Retrofit;
 
@@ -9,7 +9,7 @@ import retrofit2.Retrofit;
  * Created by scs on 17-9-21.
  */
 
-public class MyApplication extends Application {
+public class MyApplication extends MultiDexApplication {
     private Retrofit retrofit;
 
     public static Context instance;

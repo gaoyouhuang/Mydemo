@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewStub;
 
 import com.example.scs.myapplication.R;
 
@@ -32,41 +33,41 @@ import static io.reactivex.Observable.create;
 
 public class RXTextActivity extends AppCompatActivity {
     static final private String TAG = "RXTextActivity";
+    ViewStub viewStub;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rxtext);
+        viewStub = (ViewStub) findViewById(R.id.viewstub);
+        viewStub.inflate();
     }
 
     public void demo() {
-        Observable.create(new ObservableOnSubscribe<String>() {
-            @Override
-            public void subscribe(ObservableEmitter<String> e) throws Exception {
-                e.onNext("1");
-            }
-        }).flatMap(new Function<String, ObservableSource<Integer>>() {
-            @Override
-            public ObservableSource<Integer> apply(String s) throws Exception {
-                if (s.equals("1")) {
-                    List<Integer> list = new ArrayList<Integer>();
-                    list.add(1);
-                    list.add(2);
-                    list.add(3);
-                    list.add(4);
-                    list.add(3);
-                    list.add(3);
-                    return Observable.fromIterable(list).delay(1000, TimeUnit.MILLISECONDS);
-                } else
-                    return null;
-            }
-        }).distinct().subscribe(new Consumer<Integer>() {
-            @Override
-            public void accept(Integer integer) throws Exception {
-                System.out.println(integer + "  ------------");
-            }
-        });
+        scan();
 
+        reduce();
+
+        viewStub.setVisibility(View.GONE);
+
+        System.out.println("          ~~~~~~~~~~~    " + calculateInSampleSize(100, 100));
+
+
+    }
+
+    private static int calculateInSampleSize(int reqHeight, int reqWidth) {
+        int height = 150;
+        int width = 150;
+        int inSampleSize = 1;
+        if (height > reqHeight || width > reqWidth) {
+            if (width > height) {
+                inSampleSize = Math.round(height / reqHeight);
+            } else {
+                inSampleSize = Math.round(width / reqWidth);
+            }
+        }
+
+        return inSampleSize;
     }
 
     /**
@@ -98,6 +99,9 @@ public class RXTextActivity extends AppCompatActivity {
      * window
      * <p>
      * subscribeOn 切换被监听者(obserable)的线程　多次操作去第一次为主　之后都无效  observeOn　切换监听者(observer)的线程　多次切换有效
+     * <p>
+     * subscribeOn-->Observable
+     * observeOn -->Consumer Observer
      */
 
     public void baserx(View view) {
@@ -465,7 +469,7 @@ public class RXTextActivity extends AppCompatActivity {
                 Log.i(TAG, "defer long = " + aLong);
             }
         });
-        observable.subscribe(new Consumer<Long>() {
+        observable.delay(10, TimeUnit.MILLISECONDS).subscribe(new Consumer<Long>() {
             @Override
             public void accept(Long aLong) throws Exception {
                 Log.i(TAG, "defer long = " + aLong);
@@ -484,7 +488,7 @@ public class RXTextActivity extends AppCompatActivity {
                 Log.i(TAG, "create long = " + aLong);
             }
         });
-        observable1.subscribe(new Consumer<Long>() {
+        observable1.delay(10, TimeUnit.MILLISECONDS).subscribe(new Consumer<Long>() {
             @Override
             public void accept(Long aLong) throws Exception {
                 Log.i(TAG, "create long = " + aLong);
@@ -539,7 +543,7 @@ public class RXTextActivity extends AppCompatActivity {
                 .subscribe(new Consumer<Integer>() {
                     @Override
                     public void accept(Integer integer) throws Exception {
-                        Log.i(TAG, "reduce accept = " + integer);
+                        Log.i(TAG, "reduce reduce = " + integer);
                     }
                 });
     }
