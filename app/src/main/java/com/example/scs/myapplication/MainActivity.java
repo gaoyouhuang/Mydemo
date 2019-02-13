@@ -17,10 +17,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.scs.myapplication.activity.ConstraintLayoutActivity;
-import com.example.scs.myapplication.activity.Main2Activity;
 import com.example.scs.myapplication.activity.MdStyleActivity;
 import com.example.scs.myapplication.activity.NullActivity;
 import com.example.scs.myapplication.activity.RXTextActivity;
+import com.example.scs.myapplication.activity.RecycleActivity;
 import com.example.scs.myapplication.activity.SqliteActivity;
 import com.example.scs.myapplication.activity.WebViewActivity;
 import com.example.scs.myapplication.bean.StudentBean;
@@ -78,7 +78,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick3(View view) {
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+//                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+//                Intent intent = new Intent(MainActivity.this, JobSchdulerActivity.class);
+                Intent intent = new Intent(MainActivity.this, RecycleActivity.class);
+
                 startActivity(intent);
             }
 

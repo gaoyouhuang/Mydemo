@@ -8,10 +8,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- <uses-permission android:name="android.permission.INSTALL_PACKAGES"></uses-permission> -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!--SDCard中创建与删除文件权限-->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
-    <!--向SDCard写入数据权限-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 向SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -47,7 +49,20 @@
         <activity
             android:name=".activity.NullActivity"
             android:theme="@style/AppTheme_null" />
-        <activity android:name=".activity.RXActivity"></activity>
+        <activity android:name=".activity.RXActivity" />
+        <activity android:name=".activity.JobSchdulerActivity" />
+
+        <service
+            android:name=".service.JobSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".service.JobSchedulerIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:name=".activity.RecycleActivity"
+            android:label="@string/title_activity_recycle"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

@@ -51,6 +51,7 @@ public class ScrollerVG extends ViewGroup {
     private int rightBorder;
 
 
+
     public ScrollerVG(Context context) {
         this(context, null);
     }
