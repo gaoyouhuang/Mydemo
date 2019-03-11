@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 
 import com.example.scs.myapplication.R;
 import com.example.scs.myapplication.service.JobSchedulerService;
@@ -22,7 +22,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class JobSchdulerActivity extends AppCompatActivity {
+public class JobSchdulerActivity extends FragmentActivity {
     private int jobId = hashCode();
     Handler handler = new Handler(){
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
